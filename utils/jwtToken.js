@@ -9,7 +9,8 @@ export const generateToken = (user, message, statusCode, res) => {
       ),
       httpOnly: true,
       secure: process.env.NODE_ENV === "production", // Ensure cookies are secure in production
-      sameSite: "strict", // Helps protect against CSRF attacks
+      sameSite:"None",
+      secure:true // Helps protect against CSRF attacks
     })
     .json({
       success: true,
